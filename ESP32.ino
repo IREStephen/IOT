@@ -11,7 +11,7 @@ void setup() {
   // Initialize BH1750
   if (!lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE)) {
     Serial.println("BH1750 error");
-  } else {
+  } else {  
     Serial.println("BH1750 initialized");
   }
 }
@@ -19,9 +19,10 @@ void setup() {
 void loop() {
   // Read light level in lux
   float lux = lightMeter.readLightLevel();
-  Serial.print("Light: ");
-  Serial.print(lux);
+  Serial.print("Light: "); //Light
+  Serial.print(lux); // Lux
   Serial.println(" lx");
 
   delay(1000); // Read every second
+  
 }
